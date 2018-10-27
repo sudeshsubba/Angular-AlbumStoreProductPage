@@ -76,7 +76,8 @@ describe('ProductDescription', () => {
     mock_backend = mockBackend;
   }));
 
-  it(`should use image url data from the albumInfo property in the HTML template @product-description-html-uses-dynamic-albuminfo-imageurl`, async(() => {
+  it(`should use image url data from the albumInfo property in the HTML template
+  @product-description-html-uses-dynamic-albuminfo-imageurl`, async(() => {
     since('The ProductService hasn\'t been created yet.').expect(productServiceExists).toBe(true);
     expect(productDescriptionComponentExists).toBe(true);
 
@@ -90,7 +91,7 @@ describe('ProductDescription', () => {
     const ProductDescriptionFixture = TestBed.createComponent(ProductDescriptionComponent);
     ProductDescriptionFixture.detectChanges();
 
-    since('The cover image in the ProductDescriptionComponent\'s HTML does not match the cover image from the JSON response.').expect(ProductDescriptionFixture.debugElement.nativeElement.querySelector('img').getAttribute('src')).toEqual(json.album.coverImage);
+    since('The cover image in the ProductDescriptionComponents HTML doesnot match the cover image from the JSON response.').expect(ProductDescriptionFixture.debugElement.nativeElement.querySelector('img').getAttribute('src')).toEqual(json.album.coverImage);
 
     let htmlString = ""
     try {
